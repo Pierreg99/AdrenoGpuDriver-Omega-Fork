@@ -1,82 +1,53 @@
-# Qualcomm Drivers
-The aim of this github project is to The goal of this github project is to create a template that everyone can use. Unfortunately, Oems and Qualcomm are very bad at providing drivers for the Adreno GPU. Currently focused on magisk, kernelsu and other root projects may be added in the future. First of all, a/b ota update support is expected. You can create your own modules using template.
+<div align="center">
 
-### Two solutions for bootloop and similar problems
-+ **Recovery:** Safe Mode
-+ **Twrp:** `/data/adb/modules` delete
+<img src="./assets/readme-banner.svg" alt="AdrenoGpuDriver-Omega-Fork" width="100%">
 
+# AdrenoGpuDriver-Omega-Fork
 
-## Community Created Drivers
-https://tryigit.dev/snapdragon-drivers
+Qualcomm / Adreno GPU driver templates and modules for Android root ecosystems.
 
-To support community drivers, send your own driver modules to this telegram group. I stopped working for the community because I don't like the community.
+[![branch](https://img.shields.io/badge/branch-main-7EB8C9?style=flat-square)](https://github.com/Pierreg99/AdrenoGpuDriver-Omega-Fork/tree/main)
+[![line](https://img.shields.io/badge/line-OMEGA_Fork-141414?style=flat-square&labelColor=0A0A0A)](https://github.com/Pierreg99/AdrenoGpuDriver-Omega-Fork)
+[![surface](https://img.shields.io/badge/surface-Cryo_Core_Lite_v1.5-2A2A28?style=flat-square&labelColor=0A0A0A)](https://github.com/Pierreg99/AdrenoGpuDriver-Omega-Fork)
 
-### Telegram:
-https://t.me/cleverestech
+</div>
 
-## Drivers Customized By Yigit
-https://tryigit.dev/vip-drivers/
+<table><tr><td width="58%" valign="top">
 
+### Bestand
 
-## Driver Files
-> [!IMPORTANT]
-> Support the project to update it
+Qualcomm / Adreno GPU driver templates and modules for Android root ecosystems. Existing technical notes remain archived in the repository.
 
-### Opengl Driver
-```
-/lib*/egl/eglSubDriverAndroid.so
-/lib*/egl/libEGL_adreno.so
-/lib*/egl/libGLESv1_CM_adreno.so
-/lib*/egl/libGLESv2_adreno.so
-/lib*/egl/libq3dtools_adreno.so
-/lib*/egl/libq3dtools_esx.so
-/lib*/egl/some additional files (according to gpu)
-```
+Der Default-Branch `main` ist die Fläche, die zählt. Was nicht in diesem Baum liegt, ist kein Feature dieses Repos.
 
-### Vulkan Driver
-```
-/lib*/hw/vulkan.adreno.so
-/lib*/hw/some additional files (according to gpu)
-```
+</td><td width="42%" valign="top">
 
-### Opencl Driver
-```
-/lib*/libCB.so
-/lib*/some additional files (according to gpu)
-```
+### Fakten
 
-### Required Files
-```
-/lib*/libadreno_utils.so
-/lib*/libgpudataproducer.so
-/lib*/libllvm-glnext.so
-/lib*/libllvm-qcom.so
-/lib*/libllvm-qgl.so
-/lib*/libgsl.so
-/lib*/firmware/a*_sqe.fw (according to gpu)
-/lib*/some additional files (according to gpu)
-```
+| Feld | Wert |
+| --- | --- |
+| Owner | Pierreg99 |
+| Branch | `main` |
+| Linie | OMEGA Fork |
+| Thema | Adreno GPU Drivers |
+| README | Cryo Core Lite v1.5 |
 
-## Android Native Feature
-Did you know that if you have a computer, you can change the drivers for games and apps separately from the android system?
+</td></tr></table>
 
-+ https://gpuinspector.dev/
-+ https://github.com/google/agi
+## Lesen
 
-## Driver Update App
-> [!WARNING]
-> This feature is not supported by older devices.
+1. Default-Branch öffnen.
+2. Nur Dateien in diesem Baum als Beleg nehmen.
+3. Treiber-, Recovery- und Modulhinweise gegen den tatsächlichen Repo-Stand prüfen.
 
-There are very few people skilled enough to do this, but you can modify the system gpu driver implementation by editing some prop code! So in the future it is possible to make a Qualcomm independent gpu driver implementation.
-```
-ro.gfx.driver.0=com.xiaomi.ugd
-ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.kalama.api33
-```
-## Edit Gpu Driver
-You will need to learn how to use the **Adreno Profile Tools**. You can also download it from the official Qualcomm website. In general, this template is for drivers extracted from the rom dump.
+## Bisherige Dokumentation
 
-## Known Issues
-- [x] Kernelsu compatibility
-- [x] Magiskhide map conflict (improved with better permission structure and properties)
-> [!NOTE]
-> The prop code `ro.zygote.disable_gl_preload=true` helps fix the magiskhide EGL issue. Additional compatibility properties have been added to `system.prop`.
+Die vorherige README bleibt vollständig im aktuellen Repository erhalten:
+
+**[README.before-cryo-core-v1.5.md](./README.before-cryo-core-v1.5.md)**
+
+## Grenze
+
+Keine Qualitätszahl, kein Paketstand und keine Runtime, die nicht als Datei in diesem Repo steht.
+
+<p align="center"><sub>Fläche nach Cryo Core Lite v1.5 · Tokens #0A0A0A / #141414 / #7EB8C9</sub></p>
